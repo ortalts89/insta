@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
-import '../../../dist/Header.css';
+import './Header.css';
 import Logo from './Logo';
 import MainMenuContainer from '../MainMenu/MainMenuContainer';
 import SearchBar from '../Search/SearchBar';

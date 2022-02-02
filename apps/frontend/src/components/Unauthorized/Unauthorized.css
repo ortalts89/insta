@@ -1,0 +1,15 @@
+@import"https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap";
+
+.unauthorized-container{
+    border:1px solid grey;
+    height:100px;
+    width:400px;
+    margin:30px auto;
+    text-align:center;
+    padding:10px
+}
+
+.unauthorized-title{
+    font-family:"Josefin Sans",sans-serif;
+    font-size:18px
+}

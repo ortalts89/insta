@@ -1,0 +1,41 @@
+.profile-info-container{
+    margin:auto;
+    width:85%;
+    text-align:center;
+    display:flex;
+    padding:20px 20px 20px 50px;
+    border-bottom:1px solid grey
+}
+
+.profile-info-container .MuiButton-startIcon{
+    margin:0
+}
+
+.profile-data-container{
+    display:flex;
+    flex-direction:column;
+    margin-left:50px;
+    min-width:25%
+}
+
+.profile-header{
+    display:flex;
+    text-align:center
+}
+
+.profile-name{
+    margin-right:50px;
+    padding-top:10px;
+    font-family:"Josefin Sans",sans-serif;
+    font-size:30px
+}
+
+.profile-follow-container{
+    padding-top:5px
+}
+
+.profile-sub-header{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between
+}

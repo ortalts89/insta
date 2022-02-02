@@ -1,0 +1,17 @@
+.sign-up-container{
+    text-align:center;
+    background-color:#fff;
+    max-width:500px;
+    margin:32px auto 50px;
+    padding:40px 25px;
+    box-shadow:#0000001f 0 1px 6px,#0000001f 0 1px 4px
+}
+
+.sign-up-title{
+    font-size:40px
+}
+
+.sign-up-sub-title{
+    font-size:20px;
+    margin-bottom:10px
+}

@@ -1,0 +1,11 @@
+@import"https://fonts.googleapis.com/css2?family=Lobster&display=swap";
+
+.popup-title{
+    font-family:"Lobster",cursive;
+    font-size:30px;
+    margin-bottom:15px
+}
+
+.post-container{
+    height:94%
+}

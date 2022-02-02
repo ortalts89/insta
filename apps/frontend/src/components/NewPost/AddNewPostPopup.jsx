@@ -1,6 +1,6 @@
 import { useRecoilValue, useSetRecoilState, useRecoilState } from 'recoil';
 import Popup from '../Shared/Popup';
-import '../../../dist/AddNewPostPopup.css';
+import './AddNewPostPopup.css';
 import { isAddNewPostPopupDisplayed } from '../../store/components';
 import { addPostStepState, addPostImgPathState } from '../../store/posts';
 import AddNewPostUploadImg from './AddNewPostUploadImg';

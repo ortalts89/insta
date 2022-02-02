@@ -6,7 +6,7 @@ import { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useFetch } from '../store/fetch';
 import { socket } from '../socket';
-import '../../dist/SignUp.css';
+import './SignUp.css';
 import Username from '../components/GlobalFields/Username';
 import Password from '../components/GlobalFields/Password';
 import Email from '../components/GlobalFields/Email';
@@ -50,8 +50,8 @@ export default function SignUp() {
     return(
         <div className="sign-up-container">
             <form onSubmit={onSubmit}>
-                <div className="title">MyFeed</div>
-                <div className="sub-title">Sign up</div>
+                <div className="sign-up-title">MyFeed</div>
+                <div className="sign-up-sub-title">Sign up</div>
                 <FullName />
                 <Email />
                 <Username />

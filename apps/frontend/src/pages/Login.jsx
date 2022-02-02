@@ -6,7 +6,7 @@ import { useSetRecoilState } from 'recoil'
 import { loggedInUserState, isLoggedInState } from '../store/users'
 import Username from '../components/GlobalFields/Username'
 import Password from '../components/GlobalFields/Password'
-import '../../dist/Login.css'
+import './Login.css'
 import { validateUsername, validatePassword } from '../compositions/Validations'
 import { socket } from '../socket';
 

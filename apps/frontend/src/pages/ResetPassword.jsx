@@ -1,6 +1,6 @@
 import Email from '../components/GlobalFields/Email';
 import {validateEmail} from '../compositions/Validations'
-import '../../dist/ResetPassword.css'
+import './ResetPassword.css'
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';

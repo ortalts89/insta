@@ -1,6 +1,6 @@
 import { useCallback, useState} from 'react';
 import Button from '@mui/material/Button';
-import '../../../dist/AddNewPostDetails.css';
+import './AddNewPostDetails.css';
 import AutocompleteInput from '../shared/autocompleteInput';
 import { useFetch } from '../../store/fetch';
 import { useRecoilValue, useSetRecoilState, useRecoilState } from 'recoil';

@@ -1,0 +1,11 @@
+form{height:100%}
+
+.upload-form{height:100%;position:relative}
+
+.post-image{position:absolute;top:30%;width:100%}
+
+.upload-btn{position:absolute;width:100%;top:35%;text-align:center}
+
+.upload-btn input,.upload-btn-hidden input,.upload-hidden label{display:none}
+
+.upload-btn label{font-size:large;border:1px solid;border-color:#1856b4;padding:5px;cursor:pointer;color:#1856b4;border-radius:5%}

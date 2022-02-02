@@ -1,5 +1,5 @@
 import PostComment from './PostComment';
-import '../../../dist/CommentsList.css';
+import './CommentsList.css';
 
 
 export default function PostCommentsList({onDeleteComment, comments, elementRef}) {

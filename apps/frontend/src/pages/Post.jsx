@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import PostPopupContent from "../components/Feed/PostPopupContent";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useFetch } from '../store/fetch';
-import '../../dist/Post.css';
+import './Post.css';
 
 
 export default function Post() {

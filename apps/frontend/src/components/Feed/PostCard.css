@@ -1,0 +1,11 @@
+.post-card-container{width:25%;min-height:30%;max-height:30%;margin-bottom:40px;margin-right:35px}
+
+.MuiCardHeader-content{width:40%}
+
+.add-comment-container form{display:flex;border-top:1px solid rgb(197,196,196)}
+
+.post-footer{display:flex;justify-content:space-between;margin-right:20px}
+
+.post-go-to-comments{color:gray;font-size:12px;margin-left:20px;margin-bottom:10px;height:14px;cursor:pointer}
+
+.post-date{color:gray;font-size:12px}

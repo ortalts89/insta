@@ -1,4 +1,4 @@
-import '../../../dist/MainMenuBtn.css'
+import './MainMenuBtn.css'
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 

@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { addPostImgPathState, postToAddIdState, addPostStepState } from '../../store/posts';
-import '../../../dist/AddNewPostUploadingImg.css';
+import './AddNewPostUploadingImg.css';
 import { useFetch } from '../../store/fetch';
 
 

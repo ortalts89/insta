@@ -1,6 +1,6 @@
 import MainMenuBtn from './MainMenuBtn';
 import MainMenuMenu from './MainMenuMenu';
-import { useState, useCallback } from 'react';
+import { useState} from 'react';
 
 export default function MainMenuContainer({isDisplayed}) {
   if(!isDisplayed){

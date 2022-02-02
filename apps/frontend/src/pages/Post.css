@@ -1,0 +1,9 @@
+.post-page-container{
+    text-align:center;
+    margin:50px auto 0;
+    width:900px;
+    height:600px;
+    border:1px solid rgb(209,206,206);
+    padding:32px;
+    box-shadow:#0000001f 0 1px 6px,#0000001f 0 1px 4px
+}

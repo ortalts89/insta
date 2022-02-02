@@ -1,6 +1,6 @@
 import Avatar from '@mui/material/Avatar';
 import { useMemo, useState, useCallback, useRef } from 'react'
-import '../../../dist/PostPopupContent.css';
+import './PostPopupContent.css';
 import PostActions from './PostActions';
 import PostCommentsList from './PostCommentsList';
 import PostAddComment from './PostAddComment';

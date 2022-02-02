@@ -1,4 +1,4 @@
-import '../../../dist/PostsList.css'
+import './PostsList.css'
 import Post from './Post';
 
 

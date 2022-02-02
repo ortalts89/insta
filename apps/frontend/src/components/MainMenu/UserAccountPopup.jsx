@@ -5,7 +5,7 @@ import { useRecoilValue, useRecoilState } from 'recoil'
 import FullName from "../GlobalFields/FullName"
 import Email from "../GlobalFields/Email"
 import Password from '../GlobalFields/Password'
-import '../../../dist/ProfilePopup.css'
+import './AccountPopup.css';
 import { isAccountPopupDisplayed} from '../../store/components'
 import { accountDataState } from '../../store/users'
 

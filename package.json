@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "lerna bootstrap && npm run build",
+    "postinstall": "NODE_ENV=development lerna bootstrap && npm run build",
     "start": "cd apps/backend && npm start",
     "build": "lerna run build"
   },

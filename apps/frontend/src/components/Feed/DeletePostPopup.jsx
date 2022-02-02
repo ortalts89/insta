@@ -6,7 +6,7 @@ import { useCallback } from 'react'
 import { useRecoilState } from 'recoil'
 import { isDeletePostPopupDisplayedState } from '../../store/components';
 import { useFetch } from '../../store/fetch'
-import '../../../dist/DeletePostPopup.css'
+import './DeletePostPopup.css'
 import { postToDeleteState } from '../../store/posts'
 
 const style = {

@@ -4,7 +4,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import '../../../dist/SearchBar.css'
 
 export default function SearchBar() {
     const [suggestedOptions, setSuggestedOptions] = useState([]);
@@ -35,6 +34,7 @@ export default function SearchBar() {
 
     const onInputChange = useCallback((event, inputValue) => {
         if(inputValue === ''){
+            setInputValue('');
             return;
         }
         setInputValue(inputValue);

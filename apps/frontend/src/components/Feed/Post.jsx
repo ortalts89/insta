@@ -1,7 +1,7 @@
 import Card from '@mui/material/Card';
 import { useState, useCallback, useMemo } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import '../../../dist/PostCard.css';
+import './PostCard.css';
 import { loggedInUserState } from '../../store/users';
 import PostHeader from './PostHeader';
 import PostMedia from './PostMedia';

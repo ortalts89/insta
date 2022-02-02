@@ -5,7 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import PostsList from '../components/Feed/PostsList'
 import { postsListState } from '../store/posts'
 import ProfileInfo from '../components/Profile/ProfileInfo'
-import '../../dist/Profile.css'
+import './Profile.css'
 import { useFetch } from '../store/fetch'
 import { isPostPopupDisplayedState } from '../store/components'
 import { shouldRefreshPostsListState } from '../store/posts'
