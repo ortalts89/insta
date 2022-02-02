@@ -1,7 +1,7 @@
 import { useCallback, useState} from 'react';
 import Button from '@mui/material/Button';
 import './AddNewPostDetails.css';
-import AutocompleteInput from '../shared/autocompleteInput';
+import AutocompleteInput from '../shared/AutocompleteInput';
 import { useFetch } from '../../store/fetch';
 import { useRecoilValue, useSetRecoilState, useRecoilState } from 'recoil';
 import { postToAddIdState,
