@@ -1,3 +1,5 @@
 import { io } from 'socket.io-client';
+require('dotenv').config();
 
-export const socket = io('http://localhost:4000');
+
+export const socket = io(process.env.SOCKET_URL);
