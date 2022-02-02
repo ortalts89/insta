@@ -1,16 +1,19 @@
 const redis = require('redis');
+const { promisify } = require('util');
+
 
 function createRedisClient() {
     const client = redis.createClient({
         socket: {
-            host: 'redis-15152.c245.us-east-1-3.ec2.cloud.redislabs.com',
-            port: 15152,
+            host: process.env.REDIS_HOSTNAME,
+            port: Number(process.env.REDIS_PORT),
           },
-          password: 'HfietpUPXPmIImO3dfYBhq1Jc12AKzoZ'
+          password: process.env.REDIS_PASSWORD
     });
     client.connect();
     client.on('connect', function() {
         console.log('Connected to redis!');
+        client.keys('*').then((keys) => console.log("all keys: ", keys));
       });
       return client;
 }
@@ -20,4 +23,6 @@ const client = createRedisClient();
 module.exports = {
     client
 }
+
+
 
