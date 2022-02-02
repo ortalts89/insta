@@ -1,5 +1,3 @@
 import { io } from 'socket.io-client';
-require('dotenv').config();
 
-
-export const socket = io(process.env.SOCKET_URL);
+export const socket = io(import.meta.env.SOCKET_URL);
