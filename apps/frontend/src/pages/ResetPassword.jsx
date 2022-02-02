@@ -1,5 +1,5 @@
 import Email from '../components/GlobalFields/Email';
-import {validateEmail} from '../compositions/Validations'
+import {validateEmail} from '../compositions/validations'
 import './ResetPassword.css'
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
