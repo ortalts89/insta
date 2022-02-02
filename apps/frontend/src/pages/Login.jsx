@@ -7,7 +7,7 @@ import { loggedInUserState, isLoggedInState } from '../store/users'
 import Username from '../components/GlobalFields/Username'
 import Password from '../components/GlobalFields/Password'
 import './Login.css'
-import { validateUsername, validatePassword } from '../compositions/Validations'
+import { validateUsername, validatePassword } from '../compositions/validations'
 import { socket } from '../socket';
 
 
