@@ -13,12 +13,6 @@ export default function NotificationsContainer({isDisplayed}) {
     const open = Boolean(anchorEl);
     const fetch = useFetch();
 
-    // useEffect(() => {
-    //     socket.on('get notification', () => {
-    //         setUnreadNotifications((unreadNotifications) => unreadNotifications + 1);
-    //     })
-    // }, [unreadNotifications])
-
     useEffect(async () => {
         if(isDisplayed){
             const notifications = await fetch('/notifications', {}, 'GET');
