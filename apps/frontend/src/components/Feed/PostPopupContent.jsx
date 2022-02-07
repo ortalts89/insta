@@ -22,12 +22,10 @@ export default function PostPopupContent({post}) {
     },[commentsListElem])
 
     const onDeleteComment = useCallback(async (commentId) => {
-        const comment = await fetch(`/posts/${post._Id}/comments/${commentId}`,{}, 'DELETE');
-        if(comment){
-            const newCommentsList = postComments.filter(comment => comment._id !== commentId);
-            setPostComments(newCommentsList);
-        }
-    }, [post])
+        const newCommentsList = postComments.filter(comment => comment._id !== commentId);
+        setPostComments(newCommentsList);
+        await fetch(`/posts/${post._Id}/comments/${commentId}`,{}, 'DELETE');
+    }, [post, postComments])
     return(
             <div className="post-popup-container">
                 <div className="post-popup-img-container">

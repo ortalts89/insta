@@ -11,6 +11,7 @@ import Username from '../components/GlobalFields/Username';
 import Password from '../components/GlobalFields/Password';
 import Email from '../components/GlobalFields/Email';
 import FullName from '../components/GlobalFields/FullName';
+import Thumbnail from '../components/GlobalFields/Thumbnail';
 import { isLoggedInState } from '../store/users';
 
 
@@ -24,21 +25,12 @@ export default function SignUp() {
     const fetchPost = useFetch();
     const setIsLoggedIn = useSetRecoilState(isLoggedInState);
 
-
-    const onChange = useCallback((event) => {
-       console.log('good');
-    })
-
     const onSubmit = useCallback(async (event) => {
         event.preventDefault();
         const form = new FormData(event.target)
+        
 
-        const userId = await fetchPost('/register', {
-            fullname: form.get('full-name'),
-                email: form.get('email'),
-                username: form.get('username'),
-                password: form.get('password')
-        }, 'POST')
+        const userId = await fetchPost('/register', form, 'POST')
 
         if(userId){
             setIsLoggedIn(true);
@@ -55,7 +47,8 @@ export default function SignUp() {
                 <FullName />
                 <Email />
                 <Username />
-                <Password onChange={onChange}/>
+                <Password />
+                <Thumbnail />
                 <ActionButton type="submit" variant="contained">Sign Up</ActionButton>
                 <Link to='/login'>
                     <ActionButton variant="contained">Cancel</ActionButton>

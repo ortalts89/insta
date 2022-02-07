@@ -16,7 +16,7 @@ const isLoggedInState = atom({
 
 const accountDataState = atom({
     key: 'accountDataState',
-    default: {fullname: '', email: '', password: ''},
+    default: {fullname: '', email: '', password: '', thumbnail: ''},
 })
 
 const useLogout = () => {

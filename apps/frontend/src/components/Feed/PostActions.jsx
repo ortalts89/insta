@@ -30,18 +30,19 @@ export default function PostActions({postId, postAuthor, likes, isLikedByLoggedi
 
     const onLikeClick = useCallback(async () => {
         if(isLikedByCurrentUser){
-            await fetch(`/posts/${postId}/likes`, {}, 'DELETE');
+            setIsLikedByCurrentUser(false)
             const newLikesArr = postLikes.filter(like => like !== loggedInUser.id);
             setPostLikes(newLikesArr);
+            await fetch(`/posts/${postId}/likes`, {}, 'DELETE');
         } else {
-            await fetch(`/posts/${postId}/likes`, {} , 'POST');
+            setIsLikedByCurrentUser(true)
             const newArr = [...postLikes];
             newArr.push(loggedInUser.id);
             setPostLikes(newArr);
+            await fetch(`/posts/${postId}/likes`, {} , 'POST');
             socket.emit('send notification', {content: 'like', to: postAuthor, postId: postId});
         }
         setShouldRefreshPostsList(true);
-        setIsLikedByCurrentUser(isLikedByCurrentUser => !isLikedByCurrentUser);
     },[isLikedByCurrentUser, postLikes, loggedInUser])
 
 

@@ -1,7 +1,7 @@
 import Menu from '@mui/material/Menu';
 import Notification from './Notification'
 
-export default function NotificationMenu({anchorEl, open, handleClose, notificationsList}) {
+export default function NotificationMenu({anchorEl, open, handleClose, notificationsList, onDelete}) {
     return(
         <Menu
             id="basic-menu"
@@ -15,11 +15,12 @@ export default function NotificationMenu({anchorEl, open, handleClose, notificat
               vertical: "top",
               horizontal: "center" }}
             sx={{
-              margin: '10px'
+              margin: '10px',
+              height: '50%'
             }}
           >
         {notificationsList ? notificationsList.map(notification => 
-          <Notification key={notification._id} notification={notification} onCLick={handleClose}/>)
+          <Notification key={notification._id} notification={notification} onCLick={handleClose} onDelete={onDelete}/>)
             : null
         }
       </Menu>

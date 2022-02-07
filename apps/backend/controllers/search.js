@@ -6,7 +6,7 @@ async function searchUsers(req, res) {
         res.json([])
     }else{
         const dbUsers = await getUsersByQuery(query);
-        const users = dbUsers.map(user => ({id: user.id, fullname: user.fullname}))
+        const users = dbUsers.map(user => ({id: user.id, fullname: user.fullname, img: user.thumbnail}))
         res.json(users);
     }
 }

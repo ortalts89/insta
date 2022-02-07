@@ -9,9 +9,9 @@ function getComments(query = {}) {
     return Comment.find(query).populate('user','fullname thumbnail');
 }
 
-function createComment(query = {}) {
-    const comment = new Comment(query);
-    comment.populate('user','fullname thumbnail');
+async function createComment(query = {}) {
+    const comment = await new Comment(query);
+    await comment.populate('user','fullname thumbnail');
     return comment.save();
 }
 

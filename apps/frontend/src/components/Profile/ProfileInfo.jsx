@@ -90,7 +90,7 @@ export default function ProfileInfo({numOfPosts}) {
                     <div className="profile-image-container">
                         <Button 
                             className='profile-image'
-                            startIcon={<Avatar alt="Remy Sharp" src="/Kuala.png" sx={{width:'150px', height:'150px'}} />}
+                            startIcon={<Avatar alt="Remy Sharp" src={profileInfo.thumbnail} sx={{width:'150px', height:'150px'}} />}
                             variant="outlined" sx={{width:'150px', height:'150px', borderRadius:'50%', margin:0}}>
                         </Button>
                     </div>

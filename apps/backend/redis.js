@@ -15,6 +15,7 @@ function createRedisClient() {
         console.log('Connected to redis!');
         //client.keys('*').then((keys) => console.log("all keys: ", keys));
       });
+    client.on('error',function(err){ console.error(err)})
       return client;
 }
 

@@ -1,8 +1,12 @@
 import './MainMenuBtn.css'
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
+import { loggedInUserState } from '../../store/users';
+import { useRecoilValue } from 'recoil';
 
 export default function MainMenuBtn({open, handleClick}) {
+    const loggedInUser = useRecoilValue(loggedInUserState);
+
     return(
         <IconButton
             id="basic-button"
@@ -11,7 +15,7 @@ export default function MainMenuBtn({open, handleClick}) {
             aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
             >
-            <Avatar alt="Kuala" src="/Kuala.png" variant="circular" />
+            <Avatar alt="Kuala" src={loggedInUser.thumbnail} variant="circular" />
         </IconButton>
     )
 }

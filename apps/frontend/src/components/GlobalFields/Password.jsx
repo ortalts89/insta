@@ -8,11 +8,15 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {useState, useEffect} from 'react';
 
 
-export default function Password({disabled, onChange, value=''}){
+export default function Password({setToDefault, disabled, onChange, value=''}){
     const [values, setValues] = useState({
         password: '',
         showPassword: false,
       });
+
+      useEffect(() =>
+      setToDefault ? setValues({...values, password: value}) : null
+      ,[setToDefault])
 
       useEffect(() => {
         setValues({...values, password: value});
@@ -21,7 +25,7 @@ export default function Password({disabled, onChange, value=''}){
 
       const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
-        onChange(event);
+        onChange? onChange(event) : null;
       };
     
       const handleClickShowPassword = () => {

@@ -1,6 +1,13 @@
 import TextField from '@mui/material/TextField';
+import { useState, useEffect } from 'react';
 
-export default function Email({onChange, disabled, value}) {
+export default function Email({setToDefault, onChange, disabled, value=''}) {
+    const [fieldValue, setFieldValue] = useState(value);
+
+    useEffect(() =>
+    setToDefault ? setFieldValue(value) : null
+    ,[setToDefault])
+
     return (
         <div className="email-field">
             <TextField sx={{width: '70%', margin: '10px'}}
@@ -9,11 +16,11 @@ export default function Email({onChange, disabled, value}) {
                 name="email"
                 variant="standard"
                 placeholder="Enter your email address"
-                onChange={onChange}
+                onChange={(e) => setFieldValue(e.target.value)}
                 type="email"
                 autoComplete="off"
                 disabled={disabled}
-                value={value}
+                value={fieldValue}
             />
         </div>
     )

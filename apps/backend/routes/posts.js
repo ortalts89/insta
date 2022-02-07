@@ -3,8 +3,8 @@ const {addLike, deleteLike} = require('../controllers/likes.js')
 const {addComment, deleteComment} = require('../controllers/comments.js')
 const {checkUser} = require('../middlewars/users.js');
 const multer = require("multer");
-
 const upload = multer({ dest: "uploads/" });
+
 
 
 module.exports = (app) => {

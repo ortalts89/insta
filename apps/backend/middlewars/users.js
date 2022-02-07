@@ -36,9 +36,7 @@ const checkUser = async (req, res, next) => {
 
     const temporaryPayload = await getToken(token);
 
-
     if(temporaryPayload){
-        console.log(temporaryPayload);
         req.user = temporaryPayload.user;
         return next();
     }

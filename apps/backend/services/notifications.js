@@ -5,6 +5,10 @@ function createNotification(query = {}) {
     return notification.save();
 }
 
+function updateNotifications(filter, update) {
+    return Notification.updateMany(filter, update);
+}
+
 function getNotification(notificationId) {
     return Notification.findById(notificationId);
 }
@@ -16,5 +20,6 @@ function getNotifications(query = {}) {
 module.exports = {
     createNotification,
     getNotification,
-    getNotifications
+    getNotifications,
+    updateNotifications
 }

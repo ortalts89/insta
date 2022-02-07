@@ -1,10 +1,8 @@
 const { client } = require('../redis');
 
 
-
 async function getToken(token) {
     const payload =  await client.get(token);
-    console.log("payload: ", payload)
     if(payload) {
         return JSON.parse(payload);
     }

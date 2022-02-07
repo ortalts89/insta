@@ -8,7 +8,6 @@ import Avatar from '@mui/material/Avatar';
 export default function SearchBar() {
     const [suggestedOptions, setSuggestedOptions] = useState([]);
     const history = useHistory();
-    const location = useLocation();
     const [inputValue, setInputValue] = useState('');
     const [value, setValue] = useState(null);
 
@@ -25,7 +24,7 @@ export default function SearchBar() {
                 }
             })
             .then(dbUsers => dbUsers.map(user => Object.assign(user, {url: `/profile/${user.id}`})))
-            .then(users => {setSuggestedOptions(users)})
+            .then(users => {setSuggestedOptions(users); console.log(suggestedOptions)})
             .catch((err) => {
                 logout();
             })
@@ -35,6 +34,7 @@ export default function SearchBar() {
     const onInputChange = useCallback((event, inputValue) => {
         if(inputValue === ''){
             setInputValue('');
+            setSuggestedOptions([]);
             return;
         }
         setInputValue(inputValue);
@@ -68,7 +68,7 @@ export default function SearchBar() {
             renderOption={(props, option) => (
                 <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                     <div style={{ display: 'flex', alignItems: 'center', width: '100%', padding: 0}} >
-                        <Avatar alt="Remy Sharp" src="Kuala.png" sx={{mr: 2}} />
+                        <Avatar alt="Remy Sharp" src={option.img} sx={{mr: 2}} />
                         <span>{option.fullname}</span>
                     </div>
                 </Box>
