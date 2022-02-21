@@ -1,15 +1,28 @@
 import {useRecoilState, useRecoilValue } from 'recoil';
-import { isAccountPopupDisplayed} from '../../store/components';
+import { useEffect } from 'react';
 import Popup from '../Shared/Popup';
 import UserAccountContent from './UserAccountContent';
 import CircularProgress from '@mui/material/CircularProgress';
 import { accountDataState } from '../../store/users';
+import { isAccountPopupDisplayed } from '../../store/components';
+import { useFetch } from '../../store/fetch';
+
 
 
 export default function UserAccountPopup() {
     const [isPopupDisplayed, setIsPopupDisplayed] = useRecoilState(isAccountPopupDisplayed);
-    const accountData = useRecoilValue(accountDataState);
+    const [accountData, setAccountData] = useRecoilState(accountDataState);
+    const fetchGet = useFetch();
 
+
+    useEffect(async ()=> {
+        if(isPopupDisplayed){
+            const accountData = await fetchGet('/users/account');
+            if(accountData){
+                setAccountData(accountData);
+            }
+        }
+    },[isPopupDisplayed])
 
     if(!isPopupDisplayed){
         return null;

@@ -24,7 +24,7 @@ export default function SearchBar() {
                 }
             })
             .then(dbUsers => dbUsers.map(user => Object.assign(user, {url: `/profile/${user.id}`})))
-            .then(users => {setSuggestedOptions(users); console.log(suggestedOptions)})
+            .then(users => setSuggestedOptions(users))
             .catch((err) => {
                 logout();
             })
